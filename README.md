@@ -24,30 +24,30 @@ Example
 * Debian System
 ```
 ╭─root at it-daniel in /github-ass-a2s/debian-lx-brand-image-builder on master✔ using
-╰─± ./install -r stretch -d /data/chroot -m http://httpredir.debian.org/debian/ -i lx-debian-9 -p "Debian 9 LX Brand" -D "Debian 9 64-bit lx-brand image." -u https://docs.joyent.com/images/container-native-linux
+╰─± ./install -r stretch -d /data/chroot -m http://httpredir.debian.org/debian/ -i ass-debian-9 -p "Debian 9 LX Brand" -D "Debian 9 64-bit lx-brand image." -u https://docs.joyent.com/images/container-native-linux
 
 ==> Installation complete!
-==> lx-debian-9-20170826.tar.gz
+==> ass-debian-9-20170827.tar.gz
 ╭─root at it-daniel in /github-ass-a2s/debian-lx-brand-image-builder on master✘✘✘ using
 ╰─±
 ```
 
 * SmartOS System
 ```
-[root@edv-labor-smartos /zones/ass.de/test]# ./create-lx-image -t /zones/ass.de/test/lx-debian-9-20170826.tar.gz -k 4.9.0 -m 20170803T064301Z -i lx-debian-9 -d "Debian 9 64-bit lx-brand image." -u https://docs.joyent.com/images/container-native-linux
+[root@edv-labor-smartos /zones/ass.de/test]# ./create-lx-image -t /zones/ass.de/test/ass-debian-9-20170827.tar.gz -k 4.9.0 -m 20170803T064301Z -i ass-debian-9 -d "Debian 9 64-bit lx-brand image." -u https://docs.joyent.com/images/container-native-linux
 
 *** Image creation complete ***
 ==> Image files:
-lx-debian-9-20170826.zfs.gz
-lx-debian-9-20170826.json
+ass-debian-9-20170827.zfs.gz
+ass-debian-9-20170827.json
 
 [root@edv-labor-smartos /zones/ass.de/test]#
-[root@edv-labor-smartos /zones/ass.de/test]# ./create-manifest -f lx-debian-9-20170826.zfs.gz -k 4.9.0 -m 20170803T064301Z -n lx-debian-9 -v 20170826
+[root@edv-labor-smartos /zones/ass.de/test]# ./create-manifest -f ass-debian-9-20170827.zfs.gz -k 4.9.0 -m 20170803T064301Z -n ass-debian-9 -v 20170827
 [root@edv-labor-smartos /zones/ass.de/test]#
-[root@edv-labor-smartos /zones/ass.de/test]# imgadm install -m lx-debian-9-20170826.json -f lx-debian-9-20170826.zfs.gz
-Installing image ea2d7866-8a95-11e7-a114-8f4a50190eef (lx-debian-9@20170826)
-zones/ea2d7866-8a95-11e7-a114-8f4a50190eef              [=================================================================================================================================>] 100% 139.72MB  21.47MB/s     6s
-Installed image ea2d7866-8a95-11e7-a114-8f4a50190eef (lx-debian-9@20170826)
+[root@edv-labor-smartos /zones/ass.de/test]# imgadm install -m ass-debian-9-20170827.json -f ass-debian-9-20170827.zfs.gz
+Installing image 1c88885e-8b46-11e7-af26-8b92b4effc78 (ass-debian-9@20170827)
+zones/1c88885e-8b46-11e7-af26-8b92b4effc78              [=================================================================================================================================>] 100% 139.72MB  21.47MB/s     6s
+Installed image 1c88885e-8b46-11e7-af26-8b92b4effc78 (ass-debian-9@20170827)
 [root@edv-labor-smartos /zones/ass.de/test]#
 ```
 
