@@ -51,3 +51,11 @@ Installed image 1c88885e-8b46-11e7-af26-8b92b4effc78 (ass-debian-9@20170827)
 [root@edv-labor-smartos /zones/ass.de/test]#
 ```
 
+Images
+======
+
+* https://datasets.ass.de/
+* https://datasets.ass.de/datasets
+* https://datasets.ass.de/images/1c88885e-8b46-11e7-af26-8b92b4effc78/ass-debian-9-20170827.json
+* https://datasets.ass.de/images/1c88885e-8b46-11e7-af26-8b92b4effc78/ass-debian-9-20170827.zfs.gz
+
