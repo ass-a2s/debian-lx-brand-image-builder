@@ -28,7 +28,7 @@ Example
 
 ==> Installation complete!
 ==> lx-debian-9-20170826.tar.gz
-╭─root at it-daniel in /github/debian-lx-brand-image-builder on master✘✘✘ using
+╭─root at it-daniel in /github-ass-a2s/debian-lx-brand-image-builder on master✘✘✘ using
 ╰─±
 ```
 
