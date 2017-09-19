@@ -1,11 +1,8 @@
 
-ASS - Images
-============
+ASS - pre-built images
+======================
 
-* https://datasets.ass.de/images
-* https://datasets.ass.de/images/1c88885e-8b46-11e7-af26-8b92b4effc78/ass-debian-9-20170827.json
-* https://datasets.ass.de/images/1c88885e-8b46-11e7-af26-8b92b4effc78/ass-debian-9-20170827.zfs.gz
-* https://datasets.ass.de/datasets
+* http://dsapid.root1.ass.de/ui/#!/home
 
 ASS - Example
 =============
@@ -59,4 +56,9 @@ In order to use these scripts you'll need:
 
 1. Run `./install -d <chroot> -m <mirror> -i <image name> -p <proper name> -u <image docs` under Debian to install Debian 7 in a given directory. This will create a tarball of the installation in your working directory (named `<image name>-<YYMMDD>.tar.gz`). See `./install -h` for detailed usage.
 2. Copy the tarball to a SmartOS machine or SDC headnode and run `./create-lx-image -t /full/path/to/<image name>-<YYMMDD>.tar.gz` (substituting the name of your tar file). This will create the image file and manifest.
+
+ASS - pre-built image history
+=============================
+
+* build-20170827: http://dsapid.root1.ass.de/ui/#!/configure/1c88885e-8b46-11e7-af26-8b92b4effc78
 
