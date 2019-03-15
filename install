@@ -2,7 +2,7 @@
 #
 # Copyright (c) 2015 Joyent Inc., All rights reserved.
 #
-# Install Debian 7 into a directory, modify the installation, then tar it up.
+# Install Debian into a directory, modify the installation, then tar it up.
 #
 
 if [[ -n "$TRACE" ]]; then
@@ -149,7 +149,7 @@ if [[ -d $INSTALL_DIR ]]; then
 fi
 
 debootstrap --components=main \
-	--include=apt-transport-https,ca-certificates,curl,dbus,gettext-base,keyboard-configuration,less,locales,openssh-server,sudo,wget,vim \
+	--include=acpid,apt-transport-https,ca-certificates,curl,dbus,gettext-base,keyboard-configuration,less,locales,ntp,openssh-server,parted,sudo,wget,vim \
 	$RELEASE $INSTALL_DIR $MIRROR
 echo "==> Done!"
 
@@ -240,6 +240,10 @@ chroot $INSTALL_DIR apt-get -qq clean
 echo "==> Disabling PasswordAuthentication"
 sed -ri s/^#?PasswordAuthentication\ no/PasswordAuthentication\ no/ -i $INSTALL_DIR/etc/ssh/sshd_config
 sed -ri s/^#?PasswordAuthentication\ yes/PasswordAuthentication\ no/ -i $INSTALL_DIR/etc/ssh/sshd_config
+
+echo "==> Setting UsePrivilegeSeparation"
+# The sandbox value causes an issue with lx-brand. Change to "yes"
+sed -ri s/^#UsePrivilegeSeparation\ sandbox/UsePrivilegeSeparation\ yes/ -i $INSTALL_DIR/etc/ssh/sshd_config
 
 echo "==> Creating /etc/motd"
 cat << MOTD > $INSTALL_DIR/etc/motd
