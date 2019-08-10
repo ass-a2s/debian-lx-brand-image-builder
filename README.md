@@ -60,5 +60,9 @@ In order to use these scripts you'll need:
 ASS - pre-built image history
 =============================
 
-* build-20170827: http://dsapid.root1.ass.de/ui/#!/configure/1c88885e-8b46-11e7-af26-8b92b4effc78
+* ass-debian-10 (20190810) https://dsapid.root1.ass.de/ui/#!/configure/55bcd862-bb70-11e9-9991-7b9a40d4e95f
+* ass-suse-sles-12sp3 (20171104) https://dsapid.root1.ass.de/ui/#!/configure/c5c815b2-c104-11e7-8670-3f01ad4c4fdc
+* ass-suse-sles-12sp2 (20171031) https://dsapid.root1.ass.de/ui/#!/configure/353732d8-be90-11e7-aede-cf31a19019e1
+* ass-opensuse-leap-42.3 (20170919) https://dsapid.root1.ass.de/ui/#!/configure/17215c80-9d00-11e7-808d-2f5fa82c4fa1
+* ass-debian-9 (20170827) https://dsapid.root1.ass.de/ui/#!/configure/1c88885e-8b46-11e7-af26-8b92b4effc78
 
