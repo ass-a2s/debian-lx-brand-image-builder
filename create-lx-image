@@ -152,10 +152,10 @@ create_dataset() {
 	zfs create zones/$IUUID
 	chmod 700 $zpath
 
-	mkdir $zpath/root
+	mkdir -p $zpath/root
 	chmod 755 $zpath/root
 
-	mkdir $zpath/cores
+	mkdir -p $zpath/cores
 	chmod 755 $zpath/cores
 
 	echo "==> The dataset is zones/$IUUID"
@@ -190,8 +190,8 @@ modify_image() {
 	# Solaris libraries.
 
 	echo "====> Creating the /var/ld/ld.config file..."
-	mkdir $zroot/var/ld
-	mkdir $zroot/var/ld/64
+	mkdir -p $zroot/var/ld
+	mkdir -p $zroot/var/ld/64
 
 if crle -c $zroot/var/ld/ld.config -l /native/lib:/native/usr/lib \
 	-s /native/lib/secure:/native/usr/lib/secure ; then
