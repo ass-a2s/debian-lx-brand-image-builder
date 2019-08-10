@@ -211,6 +211,7 @@ else
 fi
 
 	echo "====> Setting up fstab..."
+	mkdir -p $zroot/etc
 cat << EOF > $zroot/etc/fstab
 none		/			zfs	defaults	1 1
 proc		/proc			proc	defaults	0 0
